@@ -1,12 +1,286 @@
 <!DOCTYPE html>
+<!--https://via.placeholder.com/27x34-->
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__logo">
+      <span class="page-header__logo-title">Погнали?</span>
+    </div>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </nav>
+    <p class="page-header__text">В путешествие с крутыми попутчиками!</p>
+    <img class="page-header__image" src="https://via.placeholder.com/192x255" width="192" height="255" alt="Путешественник с чемоданом">
+    <div class="user-nav">
+      <a class="user-nav__button user-nav__button--phone" href="tel:">
+        <span class="visually-hidden">Позвонить нам</span>
+      </a>
+      <a class="user-nav__button user-nav__button--mail" href="mailto:">
+        <span class="visually-hidden">Написать нам</span>
+      </a>
+      <a class="user-nav__button user-nav__button--auth" href="#">
+        Авторизация
+      </a>
+    </div>
+  </header>
+  <main class="page-main">
+    <h1 class="page-main__header visually-hidden">Сервис совместных путешествий "Погнали"</h1>
+    <section class="feedback">
+      <h2 class="visually-hidden">О нас говорят</h2>
+      <blockquote class="feedback-quote">
+        <p class="feedback-quote__text">
+          &laquo;Лучшее приложение, что я видел в жизни!&raquo;
+        </p>
+        <cite class="feedback-quote__author">
+          Мурат Эльтазин<br>
+          главный редактор газеты &raquo;гаджетлайф&laquo;
+        </cite>
+      </blockquote>
+    </section>
+    <section class="user-path">
+      <h2 class="visually-hidden">Порядок действий</h2>
+      <ol class="path-list">
+        <li class="path-list__item">Выберите направление</li>
+        <li class="path-list__item">Изучите идеи путешественников</li>
+        <li class="path-list__item">Находите тех, кто похож на ваc</li>
+        <li class="path-list__item">Путешествуйте вместе!</li>
+      </ol>
+    </section>
+    <section class="about">
+      <h2 class="about__header section__header">О сервисе</h2>
+      <p class="about__text section__text">
+        Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями
+        путешествий и черпайте вдохновение в чужих.
+      </p>
+      <p class="about__text section__text">
+        А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+      </p>
+    </section>
+    <section class="destinations">
+      <h2 class="destinations__header section__header">Направления</h2>
+      <p class="destinations__promo section__text">
+        Мы не продаем туры и ничего не рекламируем.
+        Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+      </p>
+      <div class="destinations-list">
+        <div class="destination">
+          <img class="destination__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Острова Тайланда">
+          <div class="destination__description">
+            <h3 class="destination__title">Тайланд</h3>
+            <p class="destination__text">Джунгли зовут!</p>
+            <p class="destination__followers">18321</p>
+          </div>
+        </div>
+        <div class="destination">
+          <img class="destination__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Улицы Парижа">
+          <div class="destination__description">
+            <h3 class="destination__title">Франция</h3>
+            <p class="destination__text">Трэ бьен, манифик!</p>
+            <p class="destination__followers">12518</p>
+          </div>
+        </div>
+        <div class="destination">
+          <img class="destination__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Река в Праге">
+          <div class="destination__description">
+            <h3 class="destination__title">Чехия</h3>
+            <p class="destination__text">Закоулки старой Европы</p>
+            <p class="destination__followers">5326</p>
+          </div>
+        </div>
+        <a class="destination-list__show-all" href="#">
+          Показать все
+        </a>
+      </div>
+    </section>
+    <section class="companions">
+      <h2 class="companions__header section__header">Попутчики</h2>
+      <p class="companions__text section__text">
+        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,
+        а другому маршрут для хайкинга.
+      </p>
+      <p class="companions__text section__text">
+        Теперь можно легко найти единомышленников!
+      </p>
+      <div class="companions-list">
+        <div class="companion">
+          <h3 class="companion__name companion__name--offline">Таня Фирсова</h3>
+          <img class="companion__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото попутчика">
+          <div class="companion__description">
+            <div class="companion__level">99</div>
+            <ul class="want-visit-list">
+              <li class="country">
+                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри Ланка">
+                <span class="visibility-hidden">Шри Ланка</span>
+              </li>
+              <li class="country">
+                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Тайланд">
+                <span class="visibility-hidden">Тайланд</span>
+              </li>
+              <li class="country">
+                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшелы">
+                <span class="visibility-hidden">Сейшелы</span>
+              </li>
+            </ul>
+            <div class="companion__tags">
+              <ul class="tag-list">
+                <li class="tag-list__item">#ЗОЖ</li>
+                <li class="tag-list__item">#ПП</li>
+                <li class="tag-list__item">#Фитнес</li>
+                <li class="tag-list__item">#пляж</li>
+                <li class="tag-list__item">#авокадо</li>
+                <li class="tag-list__item">#смузи</li>
+              </ul>
+            </div>
+            <ul class="transport">
+              <li class="transport__item transport__item--active">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Самолет</span>
+              </li>
+              <li class="transport__item">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Автобус</span>
+              </li>
+              <li class="transport__item">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Велосипед</span>
+              </li>
+              <li class="transport__item">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Пешие путешествия</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="companion">
+          <h3 class="companion__name companion__name--online">Петя Демин</h3>
+          <img class="companion__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото попутчика">
+          <div class="companion__description">
+            <div class="companion__level">80</div>
+            <ul class="want-visit-list">
+              <li class="country">
+                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Германия">
+                <span class="visibility-hidden">Германия</span>
+              </li>
+              <li class="country">
+                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                <span class="visibility-hidden">Чехия</span>
+              </li>
+            </ul>
+            <div class="companion__tags">
+              <ul class="tag-list">
+                <li class="tag-list__item">#бургер</li>
+                <li class="tag-list__item">#бар</li>
+                <li class="tag-list__item">#футбол</li>
+                <li class="tag-list__item">#концерт</li>
+                <li class="tag-list__item">#крафт</li>
+              </ul>
+            </div>
+            <ul class="transport">
+              <li class="transport__item transport__item--active">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Пешие путешествия</span>
+                <span class="visually-hidden transport__type">Самолет</span>
+              </li>
+              <li class="transport__item transport__item--active">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Автобус</span>
+              </li>
+              <li class="transport__item">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Велосипед</span>
+              </li>
+              <li class="transport__item transport__item--active">
+                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5"/>
+                </svg>
+                <span class="visually-hidden transport__type">Пешие путешествия</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="companions__show-all" href="#">Показать всеx</a>
+    </section>
+    <section class="profile">
+      <h2 class="profile__header section__header">Добавьте свой профиль</h2>
+      <img class="profile__image" src="https://via.placeholder.com/99x99" width="99" height="99" alt="Сбособ оплаты">
+      <ol class="profile-list">
+        <li class="profile-option">
+          <p class="profile-option__title">Базовое размещение</p>
+          <p class="profile-option__price">Бесплатно</p>
+        </li>
+        <li class="profile-option">
+          <p class="profile-option__title">Вывод на первых позициях</p>
+          <p class="profile-option__price">99 руб./мес</p>
+        </li>
+        <li class="profile-option">
+          <p class="profile-option__title">Кастомный цвет карточки<p>
+          <p class="profile-option__price">59 руб./мес</p>
+        </li>
+      </ol>
+      <a class="profile__show-for-business" href="#">
+        Показать тарифы для бизнеса
+      </a>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__logo">
+      <span class="page-footer__logo-title">Погнали?</span>
+    </div>
+    <div class="page-footer__social">
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="#">
+        <img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип htmlacademy.ru">
+        <span class="visually-hidden">Htmlacademy.ru</span>
+      </a>
+    </div>
+  </footer>
+</body>
 </html>

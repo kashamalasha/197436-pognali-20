@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--https://via.placeholder.com/27x34-->
 <html lang="ru">
 <head>
   <meta charset="utf-8">
@@ -7,8 +6,8 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__logo">
-      <span class="page-header__logo-title">Погнали?</span>
+    <div class="page-header__logo header-logo">
+      <span class="header-logo__title">Погнали?</span>
     </div>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -30,7 +29,7 @@
     </div>
   </header>
   <main class="page-main">
-    <h1 class="page-main__header visually-hidden">Сервис совместных путешествий "Погнали"</h1>
+    <h1 class="visually-hidden">Сервис совместных путешествий "Погнали"</h1>
     <section class="feedback">
       <h2 class="visually-hidden">О нас говорят</h2>
       <blockquote class="feedback-quote">
@@ -53,77 +52,77 @@
       </ol>
     </section>
     <section class="about">
-      <h2 class="about__header section__header">О сервисе</h2>
-      <p class="about__text section__text">
+      <h2 class="about__header header">О сервисе</h2>
+      <p class="about__text">
         Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями
         путешествий и черпайте вдохновение в чужих.
       </p>
-      <p class="about__text section__text">
+      <p class="about__text">
         А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
       </p>
     </section>
     <section class="destinations">
-      <h2 class="destinations__header section__header">Направления</h2>
-      <p class="destinations__promo section__text">
+      <h2 class="destinations__header header">Направления</h2>
+      <p class="destinations__promo">
         Мы не продаем туры и ничего не рекламируем.
         Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
       </p>
-      <div class="destinations-list">
-        <div class="destination">
+      <ul class="destinations-list">
+        <li class="destination">
           <img class="destination__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Острова Тайланда">
           <div class="destination__description">
             <h3 class="destination__title">Тайланд</h3>
             <p class="destination__text">Джунгли зовут!</p>
             <p class="destination__followers">18321</p>
           </div>
-        </div>
-        <div class="destination">
+        </li>
+        <li class="destination">
           <img class="destination__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Улицы Парижа">
           <div class="destination__description">
             <h3 class="destination__title">Франция</h3>
             <p class="destination__text">Трэ бьен, манифик!</p>
             <p class="destination__followers">12518</p>
           </div>
-        </div>
-        <div class="destination">
+        </li>
+        <li class="destination">
           <img class="destination__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Река в Праге">
           <div class="destination__description">
             <h3 class="destination__title">Чехия</h3>
             <p class="destination__text">Закоулки старой Европы</p>
             <p class="destination__followers">5326</p>
           </div>
-        </div>
-        <a class="destination-list__show-all" href="#">
-          Показать все
-        </a>
-      </div>
+        </li>
+      </ul>
+      <a class="destinations__show-all" href="#">
+        Показать все
+      </a>
     </section>
     <section class="companions">
-      <h2 class="companions__header section__header">Попутчики</h2>
-      <p class="companions__text section__text">
+      <h2 class="companions__header header">Попутчики</h2>
+      <p class="companions__text">
         Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,
         а другому маршрут для хайкинга.
       </p>
-      <p class="companions__text section__text">
+      <p class="companions__text">
         Теперь можно легко найти единомышленников!
       </p>
-      <div class="companions-list">
-        <div class="companion">
+      <ul class="companions-list">
+        <li class="companion">
           <h3 class="companion__name companion__name--offline">Таня Фирсова</h3>
           <img class="companion__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото попутчика">
           <div class="companion__description">
             <div class="companion__level">99</div>
-            <ul class="want-visit-list">
-              <li class="country">
-                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри Ланка">
+            <ul class="country-list">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри Ланка">
                 <span class="visibility-hidden">Шри Ланка</span>
               </li>
-              <li class="country">
-                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Тайланд">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Тайланд">
                 <span class="visibility-hidden">Тайланд</span>
               </li>
-              <li class="country">
-                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшелы">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшелы">
                 <span class="visibility-hidden">Сейшелы</span>
               </li>
             </ul>
@@ -139,48 +138,32 @@
             </div>
             <ul class="transport">
               <li class="transport__item transport__item--active">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Самолет</span>
+                <span class="visually-hidden">Самолет</span>
               </li>
               <li class="transport__item">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Автобус</span>
+                <span class="visually-hidden">Автобус</span>
               </li>
               <li class="transport__item">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Велосипед</span>
+                <span class="visually-hidden">Велосипед</span>
               </li>
               <li class="transport__item">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Пешие путешествия</span>
+                <span class="visually-hidden">Пешие путешествия</span>
               </li>
             </ul>
           </div>
-        </div>
-        <div class="companion">
+        </li>
+        <li class="companion">
           <h3 class="companion__name companion__name--online">Петя Демин</h3>
           <img class="companion__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото попутчика">
           <div class="companion__description">
             <div class="companion__level">80</div>
-            <ul class="want-visit-list">
-              <li class="country">
-                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Германия">
+            <ul class="country-list">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Германия">
                 <span class="visibility-hidden">Германия</span>
               </li>
-              <li class="country">
-                <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
                 <span class="visibility-hidden">Чехия</span>
               </li>
             </ul>
@@ -195,42 +178,25 @@
             </div>
             <ul class="transport">
               <li class="transport__item transport__item--active">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Пешие путешествия</span>
-                <span class="visually-hidden transport__type">Самолет</span>
+                <span class="visually-hidden">Самолет</span>
               </li>
               <li class="transport__item transport__item--active">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Автобус</span>
+                <span class="visually-hidden">Автобус</span>
               </li>
               <li class="transport__item">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Велосипед</span>
+                <span class="visually-hidden">Велосипед</span>
               </li>
               <li class="transport__item transport__item--active">
-                <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="5" cy="5" r="5"/>
-                </svg>
-                <span class="visually-hidden transport__type">Пешие путешествия</span>
+                <span class="visually-hidden">Пешие путешествия</span>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
       <a class="companions__show-all" href="#">Показать всеx</a>
     </section>
     <section class="profile">
-      <h2 class="profile__header section__header">Добавьте свой профиль</h2>
+      <h2 class="profile__header header">Добавьте свой профиль</h2>
       <img class="profile__image" src="https://via.placeholder.com/99x99" width="99" height="99" alt="Сбособ оплаты">
       <ol class="profile-list">
         <li class="profile-option">
@@ -250,25 +216,57 @@
         Показать тарифы для бизнеса
       </a>
     </section>
+    <section class="contacts">
+      <h2 class="contacts__header">Заинтересовались?</h2>
+      <p class="contacts__text">
+        Зарегистрируйтесь, это быстро и бесплатно!
+        Уже зарегистрированы? Тогда скорее
+        <span class="contacts__text contacts__text--decorated">авторизуйтесь!</span>
+      </p>
+      <form class="contacts__form send-email" action="https://echo.htmlacademy.ru/">
+        <input class="send-email__address" type="email" placeholder="E-mail">
+        <input class="send-email__submit" type="submit">
+      </form>
+      <p class="contacts__text">
+        Остались вопросы?
+        Мы с радостью на них ответим!
+      </p>
+      <ul class="contacts-list">
+        <li class="contacts-list__item">
+          <img class="contacts-list__item-image" src="img/contacts-phone.svg" width="18" height="18" alt="Телефон">
+          <a class="contacts-list__item-link" href="tel:88005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contacts-list__item">
+          <img class="contacts-list__item-image" src="img/contacts-mail.svg" width="18" height="13" alt="Электронная почта">
+          <a class="contacts-list__item-link" href="email:">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <p class="address">
+        <img class="address__image" src="img/contacts-location.svg" width="14" height="22" alt="Расположение">
+        <span class="address__text">ул. Большая Конюшенная, 19/8</span>
+      </p>
+      <a class="map__navigate-button" href="#">Проложить маршрут</a>
+      <img class="map__preview-image" src="https://via.placeholder.com/320x546" width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
+    </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__logo">
-      <span class="page-footer__logo-title">Погнали?</span>
+    <div class="page-footer__logo footer-logo">
+      <span class="footer-logo__title">Погнали?</span>
     </div>
     <div class="page-footer__social">
       <ul class="social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--vkontakte" href="#">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--facebook" href="#">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--instagram" href="#">
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>

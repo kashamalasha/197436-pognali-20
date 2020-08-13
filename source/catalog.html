@@ -6,8 +6,8 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__logo">
-      <span class="page-header__logo-title">Погнали?</span>
+    <div class="page-header__logo header-logo">
+      <span class="header-logo__title">Погнали?</span>
     </div>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -17,15 +17,78 @@
   </header>
   <main class="page-main">
     <h1 class="page-main__header">Попутчики</h1>
+    <section class="country-filter">
+      <h2 class="country-filter__header">Фильтрация по странам</h2>
+      <button class="country-filter__toggle">
+        <span class="visually-hidden">Показать фильтр</span>
+      </button>
+    </section>
+    <section class="companion-filter">
+      <h2 class="companion-filter__header">Подберите идеального попутчика</h2>
+      <form class="companion-filter__form" action="https://echo.htmlacademy.ru">
+        <fieldset class="filter-item">
+          <legend class="filter-item__header">Хобби</legend>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="filter-item__header">Музыка</legend>
+          <input class="filter-item__checkbox" type="checkbox" id="music-1" checked>
+          <label class="filter-item__label" for="music-1">Тяжелый рок</label>
+          <input class="filter-item__checkbox" type="checkbox" id="music-2">
+          <label class="filter-item__label" for="music-2">Русский рэп</label>
+          <input class="filter-item__checkbox" type="checkbox" id="music-3">
+          <label class="filter-item__label" for="music-3">Евроденс</label>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="filter-item__header">Еда</legend>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="filter-item__header">Транспорт</legend>
+          <input class="visually-hidden" type="checkbox" id="transport-1" checked>
+          <label class="filter-item__label" for="transport-1">
+            <img class="filter-item__label-image" src="img/plane.svg" width="14" height="16" alt="Самолет">
+            <span class="visually-hidden">Самолет</span>
+          </label>
+          <input class="visually-hidden" type="checkbox" id="transport-2" checked>
+          <label class="filter-item__image" for="transport-2">
+            <img class="filter-item__label-image" src="img/bus.svg" width="13" height="16" alt="Автобус">
+            <span class="visually-hidden">Автобус</span>
+          </label>
+          <input class="visually-hidden" type="checkbox" id="transport-3">
+          <label class="filter-item__image" for="transport-3">
+            <img class="filter-item__label-image" src="img/bike.svg" width="19" height="17" alt="Велосипед">
+            <span class="visually-hidden">Велосипед</span>
+          </label>
+          <input class="visually-hidden" type="checkbox" id="transport-4" checked>
+          <label class="filter-item__image" for="transport-4">
+            <img class="filter-item__label-image" src="img/run.svg" width="15" height="17" alt="Пешие прогулки">
+            <span class="visually-hidden">Пешие прогулки</span>
+          </label>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="filter-item__header">Левел</legend>
+          <div class="level-controls">
+            <input class="level-controls__input" id="min-level" type="text" name="min-level" value="30">
+            <label class="visually-hidden" for="min-level">от</label>
+            <span>—</span>
+            <input class="level-controls__input" id="max-level" type="text" name="min-level" value="100">
+            <label class="visually-hidden" for="max-level">до</label>
+          </div>
+          <div class="range-controls">
+            <div class="range-controls__scale">
+              <div class="range-controls__scale-bar"></div>
+            </div>
+            <div class="range-controls__toggle range-controls__toggle--max"></div>
+            <div class="range-controls__toggle range-controls__toggle--min"></div>
+          </div>
+        </fieldset>
+        <button class="companion-filter__show show-button" type="submit">Показать</button>
+      </form>
+    </section>
     <section class="companions">
-      <h2 class="companions__header section__header visually-hidden">Попутчики</h2>
-      <div class="companions-list paginated-list">
-        <div class="companion">
+      <h2 class="visually-hidden">Попутчики</h2>
+      <ul class="companions-list paginated-list">
+        <li class="companion">
           <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <svg class="companion__followed-icon companion__followed-icon--set" viewBox="0 0 5 5" version="1.1"
-               xmlns="http://www.w3.org/2000/svg">
-            <circle cx="5" cy="5" r="5"/>
-          </svg>
           <p class="companion__name companion__name--offline">Таня Фирсова</p>
           <p class="companion__followers">1,5 M</p>
           <ul class="companion__tags tag-list">
@@ -36,62 +99,48 @@
             <li class="tag-list__item">#авокадо</li>
             <li class="tag-list__item">#смузи</li>
           </ul>
-          <p class="companion__section">хочет посетить:</p>
-          <ul class="want-visit-list">
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри Ланка">
-              <span class="country__name">Шри Ланка</span>
-            </li>
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Тайланд">
-              <span class="country__name">Тайланд</span>
-            </li>
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшелы">
-              <span class="country__name">Сейшелы</span>
-            </li>
-          </ul>
-          <p class="companion__section">транспорт:</p>
-          <ul class="transport">
-            <li class="transport__item transport__item--active">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Самолет</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Автобус</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Велосипед</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Пешие путешествия</span>
-            </li>
-          </ul>
-          <p class="companion__section">level:</p>
-          <div class="companion__level">99</div>
+          <div class="want-visit">
+            <p class="want-visit__title">хочет посетить:</p>
+            <ul class="want-visit__list country-list">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри Ланка">
+                <span class="country-list__item-name">Шри Ланка</span>
+              </li>
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Тайланд">
+                <span class="country-list__item-name">Тайланд</span>
+              </li>
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшелы">
+                <span class="country-list__item-name">Сейшелы</span>
+              </li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p class="transport__title">транспорт:</p>
+            <ul class="transport__list">
+              <li class="transport__item transport__item--active">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Пешие путешествия</span>
+              </li>
+            </ul>
+          </div>
+          <div class="level">
+            <p class="level__title">level:</p>
+            <div class="level__value">99</div>
+          </div>
           <a class="companion__invite" href="#">Позвать!</a>
-        </div>
-        <div class="companion">
+        </li>
+        <li class="companion">
           <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <svg class="companion__followed-icon" viewBox="0 0 5 5" version="1.1"
-               xmlns="http://www.w3.org/2000/svg">
-            <circle cx="5" cy="5" r="5"/>
-          </svg>
           <p class="companion__name companion__name--offline">Петя Демин</p>
           <p class="companion__followers">150</p>
           <ul class="companion__tags tag-list">
@@ -101,52 +150,44 @@
             <li class="tag-list__item">#концерт</li>
             <li class="tag-list__item">#крафт</li>
           </ul>
-          <p class="companion__section">хочет посетить:</p>
-          <ul class="want-visit-list">
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Бельгия">
-              <span class="country__name">Бельгия</span>
-            </li>
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
-              <span class="country__name">Чехия</span>
-            </li>
-          </ul>
-          <p class="companion__section">транспорт:</p>
-          <ul class="transport">
-            <li class="transport__item transport__item--active">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Самолет</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon transport__item--active"></svg>
-              <span class="visually-hidden transport__type">Автобус</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Велосипед</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon transport__item--active"></svg>
-              <span class="visually-hidden transport__type">Пешие путешествия</span>
-            </li>
-          </ul>
-          <p class="companion__section">level:</p>
-          <div class="companion__level">80</div>
+          <div class="want-visit">
+            <p class="want-visit__title">хочет посетить:</p>
+            <ul class="want-visit__list country-list">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Бельгия">
+                <span class="country-list__item-name">Бельгия</span>
+              </li>
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                <span class="country-list__item-name">Чехия</span>
+              </li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p class="transport__title">транспорт:</p>
+            <ul class="transport__list">
+              <li class="transport__item transport__item--active">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Пешие путешествия</span>
+              </li>
+            </ul>
+          </div>
+          <div class="level">
+            <p class="level__title">level:</p>
+            <div class="level__value">80</div>
+          </div>
           <a class="companion__invite" href="#">Позвать!</a>
-        </div>
-        <div class="companion">
+        </li>
+        <li class="companion">
           <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <svg class="companion__follower-icon" viewBox="0 0 5 5" version="1.1"
-               xmlns="http://www.w3.org/2000/svg">
-            <circle cx="5" cy="5" r="5"/>
-          </svg>
           <p class="companion__name companion__name--offline">Марк Смолов</p>
           <p class="companion__followers">1700</p>
           <ul class="companion__tags tag-list">
@@ -156,59 +197,48 @@
             <li class="tag-list__item">#кроссовки</li>
             <li class="tag-list__item">#суприм</li>
           </ul>
-          <p class="companion__section">хочет посетить:</p>
-          <ul class="want-visit-list">
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг США">
-              <span class="country__name">США</span>
-            </li>
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Австралия">
-              <span class="country__name">Австралия</span>
-            </li>
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Доминикана">
-              <span class="country__name">Доминикана</span>
-            </li>
-          </ul>
-          <p class="companion__section">транспорт:</p>
-          <ul class="transport">
-            <li class="transport__item transport__item--active">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Самолет</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Автобус</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon transport__icon--active"></svg>
-              <span class="visually-hidden transport__type">Велосипед</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Пешие путешествия</span>
-            </li>
-          </ul>
-          <p class="companion__section">level:</p>
-          <div class="companion__level">25</div>
+          <div class="want-visit">
+            <p class="want-visit__title">хочет посетить:</p>
+            <ul class="want-visit__list country-list">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг США">
+                <span class="country-list__item-name">США</span>
+              </li>
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Австралия">
+                <span class="country-list__item-name">Австралия</span>
+              </li>
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Доминикана">
+                <span class="country-list__item-name">Доминикана</span>
+              </li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p class="transport__title">транспорт:</p>
+            <ul class="transport__list">
+              <li class="transport__item transport__item--active">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport__item transport__item--active">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Пешие путешествия</span>
+              </li>
+            </ul>
+          </div>
+          <div class="level">
+            <p class="level__title">level:</p>
+            <div class="companion__level">25</div>
+          </div>
           <a class="companion__invite" href="#">Позвать!</a>
-        </div>
-        <div class="companion">
+        </li>
+        <li class="companion">
           <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <svg class="companion__follower-icon" viewBox="0 0 5 5" version="1.1"
-               xmlns="http://www.w3.org/2000/svg">
-            <circle cx="5" cy="5" r="5"/>
-          </svg>
           <p class="companion__name companion__name--offline">Лариса Роговая</p>
           <p class="companion__followers">23</p>
           <ul class="companion__tags tag-list">
@@ -217,50 +247,43 @@
             <li class="tag-list__item">#учеба</li>
             <li class="tag-list__item">#линкедин</li>
           </ul>
-          <p class="companion__section">хочет посетить:</p>
-          <ul class="want-visit-list">
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Великобритания">
-              <span class="country__name">Великобритания</span>
-            </li>
-            <li class="country">
-              <img class="country__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Германия">
-              <span class="country__name">Германия</span>
-            </li>
-          </ul>
-          <p class="companion__section">транспорт:</p>
-          <ul class="transport">
-            <li class="transport__item transport__item--active">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Самолет</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon transport__icon--active"></svg>
-              <span class="visually-hidden transport__type">Автобус</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Велосипед</span>
-            </li>
-            <li class="transport__item">
-              <svg class="transport__icon" viewBox="0 0 5 5" version="1.1"
-                   xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5"/>
-              </svg>
-              <span class="visually-hidden transport__type">Пешие путешествия</span>
-            </li>
-          </ul>
-          <p class="companion__section">level:</p>
-          <div class="companion__level">50</div>
+          <div class="want-visit">
+            <p class="want-visit__title">хочет посетить:</p>
+            <ul class="want-visit__list country-list">
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Великобритания">
+                <span class="country-list__item-name">Великобритания</span>
+              </li>
+              <li class="country-list__item">
+                <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Германия">
+                <span class="country-list__item-name">Германия</span>
+              </li>
+            </ul>
+          </div>
+          <div class="transport">
+            <p class="transport__title">транспорт:</p>
+            <ul class="transport__list">
+              <li class="transport__item transport__item--active">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport__item">
+                <span class="visually-hidden">Пешие путешествия</span>
+              </li>
+            </ul>
+          </div>
+          <div class="level">
+            <p class="level__title">level:</p>
+            <div class="level__value">50</div>
+          </div>
           <a class="companion__invite" href="#">Позвать!</a>
-        </div>
-      </div>
+        </li>
+      </ul>
       <a class="companions__show-more" href="#">Показать еще</a>
       <p class="companions__page-buttons page-buttons">
         <button class="page-buttons__button"><span class="visually-hidden">Назад</span></button>
@@ -269,23 +292,23 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__logo">
-      <span class="page-footer__logo-title">Погнали?</span>
+    <div class="page-footer__logo footer-logo">
+      <span class="footer-logo__title">Погнали?</span>
     </div>
     <div class="page-footer__social">
       <ul class="social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--vkontakte" href="#">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--facebook" href="#">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--instagram" href="#">
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>

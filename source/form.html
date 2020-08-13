@@ -6,8 +6,8 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__logo">
-      <span class="page-header__logo-title">Погнали?</span>
+    <div class="page-header__logo header-logo">
+      <span class="header-logo__title">Погнали?</span>
     </div>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -16,26 +16,183 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__header">Направления</h1>
+    <h1 class="visually-hidden">Редактировать профиль</h1>
+    <p class="page-main__header">Направления</p>
+    <section class="about-me">
+      <h2 class="visually-hidden">Информация обо мне</h2>
+      <img class="about-me__image" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Моя фотография">
+      <div class="about-me__level level">
+        <p class="level__title">level:
+          <span class="level__value">80</span>
+        </p>
+      </div>
+      <a class="about-me__photo-change button" href="#">Сменить фото</a>
+      <div class="about-me__tags">
+        <p class="about-me__tags-title">Транспорт</p>
+        <ul class="tag-list">
+          <li class="tag-list__item">#бургер</li>
+          <li class="tag-list__item">#бар</li>
+          <li class="tag-list__item">#футбол</li>
+          <li class="tag-list__item">#концерт</li>
+          <li class="tag-list__item">#крафт</li>
+        </ul>
+      </div>
+      <div class="about-me__transport">
+        <p class="about-me__transport-title">Транспорт</p>
+        <ul class="transport__list">
+          <li class="transport__item transport__item--active">
+            <span class="visually-hidden">Самолет</span>
+          </li>
+          <li class="transport__item transport__item--active">
+            <span class="visually-hidden">Автобус</span>
+          </li>
+          <li class="transport__item">
+            <span class="visually-hidden">Велосипед</span>
+          </li>
+          <li class="transport__item transport__item--active">
+            <span class="visually-hidden">Пешие путешествия</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="plans">
+      <h2 class="plans__header">Мои планы:</h2>
+      <ol class="plans-list">
+        <li class="plans-list__item">
+          <h3 class="plans-list__item-header">Франция, Италия</h3>
+          <ul class="plan-options">
+            <li class="plan-options__companions">3 попутчика</li>
+            <li class="plan-options__dates">26 мар - 29 мар</li>
+          </ul>
+          <button class="plans-list__item-change">Изменить</button>
+        </li>
+        <li class="plans-list__item">
+          <h3 class="plans-list__item-header">Тайланд, Индонезия</h3>
+          <ul class="plan-options">
+            <li class="plan-options__companions">1 попутчик</li>
+            <li class="plan-options__dates">1 июл - 15 июл</li>
+          </ul>
+          <button class="plans-list__item-change">Изменить</button>
+        </li>
+      </ol>
+    </section>
+    <section class="add-plan">
+      <h2 class="add-plan__header">Добавить план:</h2>
+      <div class="add-plan__wrapper slider">
+        <form action="https://echo.htmlacademy.ru">
+          <fieldset class="add-plan__step step-one">
+            <legend class="add-plan__step-header">Шаг 1. Даты пребывания</legend>
+            <p class="add-plan__step-action">
+              Укажите предпочтительное количество попутчиков, которых
+              вы хотели бы позвать в поездку и ее предполагаемую длительность.
+            </p>
+            <label class="step-one__label">Ищу попутчиков:
+              <span class="step-one__input-subtract">-</span>
+              <input class="step-one__input" type="text" name="companions-qty">
+              <span class="step-one__input-add">+</span>
+              <span class="step-one__label-placeholder">чел.</span>
+            </label>
+            <label class="step-one__label">Длительность:
+              <span class="step-one__input-subtract">-</span>
+              <input class="step-one__input" type="text" name="duration">
+              <span class="step-one__input-add">+</span>
+              <span class="step-one__label-placeholder">дн.</span>
+            </label>
+            <label class="step-one__with-kids-label">Можно с детьми
+              <input class="step-one__with-kids-checkbox" type="checkbox" name="with-kids" checked>
+            </label>
+            <div class="step-one__calendar datepicker">
+              <label class="visually-hidden">Дата начала
+                <input class="datepicker__input" type="date" name="plan-start">
+              </label>
+              <label class="visually-hidden">Дата завершения
+                <input class="datepicker__input" type="date" name="plan-finish">
+              </label>
+            </div>
+            <button class="add-plan__next-step" type="button">Следующий шаг</button>
+          </fieldset>
+          <fieldset class="add-plan__step step-two">
+            <legend class="add-plan__step-header">Шаг2. Маршрут</legend>
+            <p class="add-plan__step-action">
+              Укажите страны, которые вы хотели посетить.
+              Это может быть одна или сразу несколько.
+            </p>
+            <div class="roadmap">
+              <ul class="country-list">
+                <li class="country-list__item">
+                  <select class="country-list__item-name" name="country-1">
+                    <option value="Босния и Герцеговина" selected>Босния и Герцеговина</option>
+                  </select>
+                  <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Босния и Герцеговина">
+                </li>
+                <li class="country-list__item">
+                  <select class="country-list__item-name" name="country-2">
+                    <option value="Чехия" selected>Чехия</option>
+                  </select>
+                  <img class="country-list__item-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                </li>
+                <li class="country-list__item">
+                  <select class="country-list__item-name" name="country-3">
+                    <option value="" disabled selected>Выберите страну</option>
+                  </select>
+                  <img class="country-list__item-dropdown" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Выберите страну">
+                </li>
+              </ul>
+              <button class="roadmap__add-country" type="button">
+                <span class="roadmap__add-country-label">Добавить страну</span>
+                <img class="roadmap__add-country-image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Добавить страну">
+              </button>
+            </div>
+            <button class="add-plan__next-step" type="button">Следующий шаг</button>
+            <button class="add-plan__prev-step" type="button">На шаг назад</button>
+          </fieldset>
+          <fieldset class="add-plan__step step-three">
+            <legend class="add-plan__step-header">Шаг3. Развлечения</legend>
+            <p class="add-plan__step-action">
+              Наконец, расскажите о своих планах времяпровождения.
+              Можно писать в свободной форме и ставить тэги.
+            </p>
+            <ul class="entertaiment-list">
+              <li class="entertaiment-list__item">
+                <span class="entertaiment-list__item-country">Босния и Герцеговина</span>
+                <img class="entertaiment-list__item-country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Босния и Герцеговина">
+                <div class="entertaiment-list__item-wrapper">
+                  <textarea class="entertaiment-list__item-text" name="country-1-entertaiment" cols="30" rows="10" placeholder="План действий"></textarea>
+                </div>
+              </li>
+              <li class="entertaiment-list__item">
+                <span class="entertaiment-list__item-country">Чехия</span>
+                <img class="entertaiment-list__item-country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                <div class="entertaiment-list__item-wrapper">
+                  <textarea class="entertaiment-list__item-text" name="country-2-entertaiment" cols="30" rows="10" placeholder="План действий">Пить пиво и лаить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </div>
+              </li>
+            </ul>
+          <button class="add-plat__submit=" type="submit">Отправить</button>
+          <button class="add-plan__prev-step" type="button">На шаг назад</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__logo">
-      <span class="page-footer__logo-title">Погнали?</span>
+    <div class="page-footer__logo footer-logo">
+      <span class="footer-logo__title">Погнали?</span>
     </div>
     <div class="page-footer__social">
       <ul class="social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--vkontakte" href="#">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--facebook" href="#">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
+        <li class="social-item">
+          <a class="social-item__link social-item__link--instagram" href="#">
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>

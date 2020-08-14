@@ -1,0 +1,58 @@
+.transport {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.transport__title {
+  margin: 0;
+
+  font-family: "BloggerSans", "Arial", "Helvetica", sans-serif;
+  font-size: 15px;
+  color: #444444;
+}
+
+.transport__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.transport__item {
+  display: block;
+  width: 33px;
+  height: 33px;
+
+  background-color: #edeff6;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &--plane {
+    background-image: url("../../img/plane.svg");
+    background-size: 14px 16px;
+    background-position: 40% 50%;
+  }
+
+  &--bus {
+    background-image: url("../../img/bus.svg");
+    background-size: 13px 16px;
+  }
+
+  &--bike {
+    background-image: url("../../img/bike.svg");
+    background-size: 19px 17px;
+  }
+
+  &--hike {
+    background-image: url("../../img/run.svg");
+    background-size: 19px 17px;
+  }
+}

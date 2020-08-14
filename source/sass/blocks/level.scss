@@ -1,0 +1,39 @@
+.level {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+}
+
+.level__value {
+  $box-size: 45px;
+  $line-height: 24px;
+
+  position: relative;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $box-size;
+  height: $box-size;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: ($box-size - $line-height) / 2;
+  padding-bottom: ($box-size - $line-height) / 2 - 5px;
+
+  font-size: 24px;
+  line-height: $line-height;
+
+  border-radius: 50%;
+  border: 3px solid #ff8d30;
+}
+
+.level__title {
+  margin: 0;
+
+  font-family: "BloggerSans", "Arial", "Helvetica", sans-serif;
+  font-size: 15px;
+  color: #444444;
+}

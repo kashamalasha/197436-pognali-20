@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__logo header-logo">
-      <span class="header-logo__title">Погнали?</span>
+      <img class="header-logo__image" src="img/logo-mobile-white@1x.png" width="100" height= "19" alt="Логотип Погнали">
     </div>
     <nav class="main-nav">
+      <!--TODO: заменить кнопку на бургер-->
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -17,7 +19,9 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Редактировать профиль</h1>
-    <p class="page-main__header">Направления</p>
+    <p class="page-main__header">
+      <span class="page-main__header-title">Направления</span>
+    </p>
     <section class="about-me">
       <h2 class="visually-hidden">Информация обо мне</h2>
       <img class="about-me__image" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Моя фотография">
@@ -177,7 +181,7 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__logo footer-logo">
-      <span class="footer-logo__title">Погнали?</span>
+      <img class="footer-logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали"/>
     </div>
     <div class="page-footer__social">
       <ul class="social">
@@ -200,8 +204,8 @@
     </div>
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="#">
-        <img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип htmlacademy.ru">
+      <a class="copyright__link" href="http://www.htmlacademy.ru/">
+        <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.ru">
         <span class="visually-hidden">Htmlacademy.ru</span>
       </a>
     </div>

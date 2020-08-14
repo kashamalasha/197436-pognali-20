@@ -1,0 +1,21 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px;
+
+  background-color: #ffffff;
+}
+
+.page-footer__logo {
+  margin-top: 38px;
+}
+
+.page-footer__social {
+  margin-top: 38px;
+}
+
+.page-footer__copyright {
+  margin-top: 38px;
+}

@@ -1,0 +1,56 @@
+.user-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user-nav__button {
+  $btn-height: 40px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: $btn-height;
+  min-width: 40px;
+
+  color: #000000;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+
+  background-size: 18px 18px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+
+  &--phone {
+    background-image: url("../../img/topmenu-phone.svg");
+    background-color: #ff8d30;
+  }
+
+  &--mail {
+    background-image: url("../../img/topmenu-mail.svg");
+    background-color: #ffbd30;
+  }
+
+  &--auth {
+    $line-height: 17px;
+
+    font-size: 17px;
+    line-height: $line-height;
+    text-transform: uppercase;
+
+    padding: 40px;
+    padding-top: ($btn-height - $line-height) / 2;
+    padding-bottom: ($btn-height - $line-height) / 2;
+
+    background-color: #ffd74b;
+  }
+}

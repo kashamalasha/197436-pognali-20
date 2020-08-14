@@ -1,0 +1,19 @@
+.page-header {
+  position: relative;
+
+  width: 320px;
+
+  font-family: "BloggerSans-Bold", "Arial", "Helvetica", sans-serif;
+  color: #ffffff;
+
+  background-color: #192144;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 100%;
+}
+
+.page-header__text {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}

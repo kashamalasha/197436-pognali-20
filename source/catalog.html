@@ -3,22 +3,27 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__logo header-logo">
-      <span class="header-logo__title">Погнали?</span>
+      <img class="header-logo__image" src="img/logo-mobile-white@1x.png" width="100" height= "19" alt="Логотип Погнали">
     </div>
     <nav class="main-nav">
+      <!--TODO: заменить кнопку на бургер-->
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__header">Попутчики</h1>
+    <h1 class="page-main__header">
+      <span class="page-main__header-title">Попутчики</span>
+    </h1>
     <section class="country-filter">
       <h2 class="country-filter__header">Фильтрация по странам</h2>
+      <!--TODO: сделать кнопку невидимой, добавить псевдоэлемент-->
       <button class="country-filter__toggle">
         <span class="visually-hidden">Показать фильтр</span>
       </button>
@@ -84,14 +89,21 @@
         <button class="companion-filter__show show-button" type="submit">Показать</button>
       </form>
     </section>
-    <section class="companions">
-      <h2 class="visually-hidden">Попутчики</h2>
-      <ul class="companions-list paginated-list">
-        <li class="companion">
-          <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <p class="companion__name companion__name--offline">Таня Фирсова</p>
-          <p class="companion__followers">1,5 M</p>
-          <ul class="companion__tags tag-list">
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог попутчиков</h2>
+      <ul class="catalog-list paginated-list">
+        <li class="catalog-list__item user">
+          <div class="catalog-list__flex-inner">
+            <img class="user__avatar" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика">
+            <div class="user__header">
+              <p class="user__name user__name--offline">
+                <span class="user__name-first">Таня</span><br>
+                <span class="user__name-second">Фирсова</span>
+              </p>
+              <p class="user__followers">1,5 M</p>
+            </div>
+          </div>
+          <ul class="user__tags tag-list">
             <li class="tag-list__item">#ЗОЖ</li>
             <li class="tag-list__item">#ПП</li>
             <li class="tag-list__item">#Фитнес</li>
@@ -116,34 +128,43 @@
               </li>
             </ul>
           </div>
-          <div class="transport">
-            <p class="transport__title">транспорт:</p>
-            <ul class="transport__list">
-              <li class="transport__item transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Пешие путешествия</span>
-              </li>
-            </ul>
+          <div class="catalog-list__flex-inner">
+            <div class="transport">
+              <p class="transport__title">транспорт:</p>
+              <ul class="transport__list">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport__item transport__item--bike">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--hike">
+                  <span class="visually-hidden">Пешие путешествия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="level">
+              <p class="level__title">левел:</p>
+              <div class="level__value">99</div>
+            </div>
           </div>
-          <div class="level">
-            <p class="level__title">level:</p>
-            <div class="level__value">99</div>
-          </div>
-          <a class="companion__invite" href="#">Позвать!</a>
+          <a class="user__invite" href="#">Позвать!</a>
         </li>
-        <li class="companion">
-          <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <p class="companion__name companion__name--offline">Петя Демин</p>
-          <p class="companion__followers">150</p>
-          <ul class="companion__tags tag-list">
+        <li class="catalog-list__item user">
+          <div class="catalog-list__flex-inner">
+            <img class="user__avatar" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика">
+            <div class="user__header">
+              <p class="user__name user__name--online">
+                <span class="user__name-first">Петя</span><br>
+                <span class="user__name-second">Демин</span>
+              </p>
+              <p class="user__followers">150</p>
+            </div>
+          </div>
+          <ul class="user__tags tag-list">
             <li class="tag-list__item">#бургер</li>
             <li class="tag-list__item">#бар</li>
             <li class="tag-list__item">#футбол</li>
@@ -163,34 +184,43 @@
               </li>
             </ul>
           </div>
-          <div class="transport">
-            <p class="transport__title">транспорт:</p>
-            <ul class="transport__list">
-              <li class="transport__item transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Пешие путешествия</span>
-              </li>
-            </ul>
+          <div class="catalog-list__flex-inner">
+            <div class="transport">
+              <p class="transport__title">транспорт:</p>
+              <ul class="transport__list">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport__item transport__item--bike">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--hike">
+                  <span class="visually-hidden">Пешие путешествия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="level">
+              <p class="level__title">левел:</p>
+              <div class="level__value">80</div>
+            </div>
           </div>
-          <div class="level">
-            <p class="level__title">level:</p>
-            <div class="level__value">80</div>
-          </div>
-          <a class="companion__invite" href="#">Позвать!</a>
+          <a class="user__invite" href="#">Позвать!</a>
         </li>
-        <li class="companion">
-          <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <p class="companion__name companion__name--offline">Марк Смолов</p>
-          <p class="companion__followers">1700</p>
-          <ul class="companion__tags tag-list">
+        <li class="catalog-list__item user">
+          <div class="catalog-list__flex-inner">
+            <img class="user__avatar" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика">
+            <div class="user__header">
+              <p class="user__name user__name--offline">
+                <span class="user__name-first">Марк</span><br>
+                <span class="user__name-second">Смолов</span>
+              </p>
+              <p class="user__followers">1700</p>
+            </div>
+          </div>
+          <ul class="user__tags tag-list">
             <li class="tag-list__item">#рэп</li>
             <li class="tag-list__item">#тату</li>
             <li class="tag-list__item">#хайпбист</li>
@@ -214,34 +244,43 @@
               </li>
             </ul>
           </div>
-          <div class="transport">
-            <p class="transport__title">транспорт:</p>
-            <ul class="transport__list">
-              <li class="transport__item transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport__item transport__item--active">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Пешие путешествия</span>
-              </li>
-            </ul>
+          <div class="catalog-list__flex-inner">
+            <div class="transport">
+              <p class="transport__title">транспорт:</p>
+              <ul class="transport__list">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport__item transport__item--bike transport__item--active">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--hike">
+                  <span class="visually-hidden">Пешие путешествия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="level">
+              <p class="level__title">левел:</p>
+              <div class="level__value">25</div>
+            </div>
           </div>
-          <div class="level">
-            <p class="level__title">level:</p>
-            <div class="companion__level">25</div>
-          </div>
-          <a class="companion__invite" href="#">Позвать!</a>
+          <a class="user__invite" href="#">Позвать!</a>
         </li>
-        <li class="companion">
-          <img class="companion__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-          <p class="companion__name companion__name--offline">Лариса Роговая</p>
-          <p class="companion__followers">23</p>
-          <ul class="companion__tags tag-list">
+        <li class="catalog-list__item user">
+          <div class="catalog-list__flex-inner">
+          <img class="companion__avatar" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика">
+            <div class="user__header">
+              <p class="user__name user__name--offline">
+                <span class="user__name-first">Лариса</span><br>
+                <span class="user__name-second">Роговая</span>
+              </p>
+              <p class="user__followers">23</p>
+            </div>
+          </div>
+          <ul class="user__tags tag-list">
             <li class="tag-list__item">#образование</li>
             <li class="tag-list__item">#карьера</li>
             <li class="tag-list__item">#учеба</li>
@@ -260,32 +299,34 @@
               </li>
             </ul>
           </div>
-          <div class="transport">
-            <p class="transport__title">транспорт:</p>
-            <ul class="transport__list">
-              <li class="transport__item transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport__item">
-                <span class="visually-hidden">Пешие путешествия</span>
-              </li>
-            </ul>
+          <div class="catalog-list__flex-inner">
+            <div class="transport">
+              <p class="transport__title">транспорт:</p>
+              <ul class="transport__list">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport__item transport__item--bike">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--hike">
+                  <span class="visually-hidden">Пешие путешествия</span>
+                </li>
+              </ul>
+            </div>
+            <div class="level">
+              <p class="level__title">левел:</p>
+              <div class="level__value">50</div>
+            </div>
           </div>
-          <div class="level">
-            <p class="level__title">level:</p>
-            <div class="level__value">50</div>
-          </div>
-          <a class="companion__invite" href="#">Позвать!</a>
+          <a class="user__invite" href="#">Позвать!</a>
         </li>
       </ul>
-      <a class="companions__show-more" href="#">Показать еще</a>
-      <p class="companions__page-buttons page-buttons">
+      <a class="catalog__show-more" href="#">Показать еще</a>
+      <p class="catalog__page-buttons page-buttons">
         <button class="page-buttons__button"><span class="visually-hidden">Назад</span></button>
         <button class="page-buttons__button"><span class="visually-hidden">Вперед</span></button>
       </p>
@@ -293,7 +334,7 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__logo footer-logo">
-      <span class="footer-logo__title">Погнали?</span>
+      <img class="footer-logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали"/>
     </div>
     <div class="page-footer__social">
       <ul class="social">
@@ -316,8 +357,8 @@
     </div>
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="#">
-        <img class="copyright__image" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип htmlacademy.ru">
+      <a class="copyright__link" href="http://www.htmlacademy.ru/">
+        <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.ru">
         <span class="visually-hidden">Htmlacademy.ru</span>
       </a>
     </div>

@@ -1,0 +1,36 @@
+.page-buttons {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 270px;
+
+  border-radius: 16px;
+}
+
+.page-buttons__button {
+  width: 134px;
+  height: 100%;
+
+  border: none;
+  background-repeat: no-repeat;
+  background-size: 10px 20px;
+  background-position: 50% 50%;
+
+  &:first-child {
+    margin-right: 3px;
+
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-image: url("../../img/triangle-arrow-left.svg");
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url("../../img/triangle-arrow-right.svg");
+  }
+}

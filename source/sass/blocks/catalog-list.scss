@@ -1,0 +1,14 @@
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-list__flex-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

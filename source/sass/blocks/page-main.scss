@@ -1,0 +1,33 @@
+.page-main {
+  position: relative;
+
+  width: 320px;
+
+  font-family: "BloggerSans-Bold", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+
+  background-color: #121c42;
+}
+
+.page-main__header {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
+
+  display: block;
+  width: 100%;
+
+  background-color: #161c35;
+}
+
+.page-main__header-title {
+  font-size: 36px;
+  line-height: 36px;
+  width: 173px;
+
+  // TODO: заменить подчеркивание на ::after элемент
+  border-bottom: 5px solid #ff8d30;
+}

@@ -1,0 +1,33 @@
+.profile {
+  width: 100%;
+  padding-top: 37px;
+
+  background-color: #edeff6;
+}
+
+.profile__flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 244px;
+}
+
+.profile__header {
+  width: 101px;
+}
+
+.profile__show-for-business {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 40px;
+  width: auto;
+  margin-top: 26px;
+  padding-bottom: 26px;
+
+  text-decoration: none;
+  line-height: 40px;
+  color: #192144;
+}

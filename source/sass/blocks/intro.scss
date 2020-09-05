@@ -1,0 +1,22 @@
+.intro {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+
+  background-color: #192144;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 100%;
+}
+
+.intro__text {
+  @include -title-reset;
+
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}

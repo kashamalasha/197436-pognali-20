@@ -1,0 +1,27 @@
+.social-item__link {
+  $box-size: 45px;
+
+  display: block;
+  width: $box-size;
+  height: $box-size;
+
+  border-radius: 50%;
+  background-color: #ffd74b;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &--vkontakte {
+    background-image: url("../../img/vk.svg");
+    background-size: 23px 12px;
+  }
+
+  &--facebook {
+    background-image: url("../../img/facebook.svg");
+    background-size: 11px 21px;
+  }
+
+  &--instagram {
+    background-image: url("../../img/instagram.svg");
+    background-size: 18px 18px;
+  }
+}

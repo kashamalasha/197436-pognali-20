@@ -1,0 +1,17 @@
+.about {
+  margin-top: 10px;
+  padding-top: 33px;
+
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 292px 352px;
+  background-position: 18px 0;
+}
+
+.about__text {
+  font-family: "BloggerSans-Light", "Arial", "Helvetica", sans-serif;
+
+  &:last-of-type {
+    font-family: inherit;
+  }
+}

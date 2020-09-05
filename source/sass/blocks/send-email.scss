@@ -1,0 +1,75 @@
+@mixin -input-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.send-email {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 62px;
+}
+
+.send-email__address {
+  @include -input-reset;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 84px;
+  padding-top: 2px;
+
+  border-radius: 8px;
+
+  &::placeholder {
+    font-family: "BloggerSans-Bold", "Arial", "Helvetica", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    opacity: 0.4;
+  }
+}
+
+.send-email__submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  box-sizing: border-box;
+  display: block;
+  width: 60px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #ffd74b;
+
+  &::before {
+    $width: 10px;
+    $height: 14px;
+
+    content: "";
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 25px;
+    left: 28px;
+
+    display: block;
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-size: 10px 14px;
+    background-position: 50% 50%;
+  }
+}

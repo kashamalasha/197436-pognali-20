@@ -1,0 +1,40 @@
+.contacts-list {
+  @include -list-reset;
+}
+
+.contacts-list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contacts-list__item-icon {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  border-radius: 50%;
+  background-color: #000000;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  &--phone {
+    background-image: url("../../img/contacts-phone.svg");
+    background-size: 18px 18px;
+  }
+
+  &--mail {
+    background-image: url("../../img/contacts-mail.svg");
+    background-size: 18px 13px;
+  }
+}
+
+.contacts-list__item-link {
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #ffd74b;
+}

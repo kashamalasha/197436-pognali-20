@@ -1,0 +1,21 @@
+.country-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.country-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.country-list__item-flag {
+  margin-right: 15px;
+}
+
+.country-list__item-name {
+  font-family: "BloggerSans-Medium", "Arial", "Helvetica", sans-serif;
+  font-size: 15px;
+  color: #1d2e5b;
+}

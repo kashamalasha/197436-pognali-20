@@ -1,0 +1,69 @@
+.plans {
+  background-color: #dfe3f0;
+  padding: 20px;
+}
+
+.plans__title {
+  margin: 0;
+  color: #1d2e5b;
+}
+
+.plans__list {
+  @include -list-reset;
+  margin: 0 auto;
+
+  width: 270px;
+}
+
+.plans__list-item {
+  position: relative;
+  box-sizing: border-box;
+
+  padding: 25px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  font-family: inherit;
+  font-size: 14px;
+  letter-spacing: 1.68px;
+  font-weight: 700;
+  color: #1d2e5b;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+
+  counter-increment: country;
+}
+
+.plans__list-item-title {
+  @include -title-reset;
+
+  margin-left: 20px;
+
+  text-transform: none;
+
+  &::before {
+    content: counter(country);
+
+    position: absolute;
+    left: 25px;
+  }
+}
+
+.plans__list-item-change {
+  padding: 0;
+  width: 100%;
+
+  border: none;
+  background-color: inherit;
+
+  color: rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1.4px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+}

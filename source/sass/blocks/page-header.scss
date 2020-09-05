@@ -1,23 +1,43 @@
 .page-header {
   position: relative;
+  box-sizing: border-box;
 
   width: 320px;
+  padding: 15px;
 
   font-family: "BloggerSans-Bold", "Arial", "Helvetica", sans-serif;
   color: #ffffff;
 
-  background-color: #192144;
-  background-image: url("../../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px 100%;
-}
-
-.page-header__logo {
   background-color: #161c35;
 }
 
-.page-header__text {
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+.page-header__toggle-menu {
+  position: relative;
+
+  width: 50px;
+  height: 100%;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 25px;
+    height: 11px;
+
+    background-image: url("../../img/menu.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: 100%;
+  }
 }

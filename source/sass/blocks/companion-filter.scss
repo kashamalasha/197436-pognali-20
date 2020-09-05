@@ -1,5 +1,43 @@
 .companion-filter {
-  color: #1d2e5b;
+  width: 270px;
+  margin-bottom: 28px;
+  padding: 25px 0 22px;
 
   background-color: #ffd74b;
+  border-radius: 20px;
+}
+
+.companion-filter__form {
+  @include -form-reset;
+
+  font-size: 15px;
+  line-height: 15px;
+  color: #1d2e5b;
+}
+
+.companion-filter__header {
+  font-size: 22px;
+  line-height: 22px;
+  color: #1d2e5b;
+}
+
+.companion-filter__show {
+  box-sizing: content-box;
+
+  display: block;
+  width: 230px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 5px;
+
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #161c35;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 20px;
 }

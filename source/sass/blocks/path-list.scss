@@ -16,9 +16,10 @@
 
   display: block;
   width: 270px;
-  height: 160px;
+  height: 100px;
   padding-top: 23px;
   padding-left: 25px;
+  margin-top: -80px;
 
   border-radius: 10px;
 
@@ -34,31 +35,23 @@
     color: #ffffff;
   }
 
-  &:nth-child(1) {
-    position: absolute;
-    top: -80px;
+  &:not(:first-child) {
+    margin-top: -20px;
+  }
 
+  &:nth-child(1) {
     background-color: #ff8d30;
   }
 
   &:nth-child(2) {
-    position: absolute;
-    top: 0;
-
     background-color: #ffa530;
   }
 
   &:nth-child(3) {
-    position: absolute;
-    top: 80px;
-
     background-color: #ffbd30;
   }
 
-  &:nth-child(4) {
-    position: absolute;
-    top: 160px;
-
+  &:last-child {
     height: 80px;
 
     background-color: #ffd74b;

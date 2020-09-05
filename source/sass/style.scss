@@ -1,5 +1,5 @@
-@import "global", "fonts",
-  "blocks/visually-hidden",
+@import "variables", "global", "fonts",
+  "visually-hidden", "mixins",
   "blocks/about",
   "blocks/companion",
   "blocks/companions-list",
@@ -32,4 +32,5 @@
   "blocks/transport",
   "blocks/level",
   "blocks/page-buttons",
-  "blocks/main-nav";
+  "blocks/main-nav",
+  "blocks/intro";

@@ -1,0 +1,39 @@
+.todo-list {
+  @include -list-reset;
+  margin: 0 auto;
+}
+
+.todo-list__item {
+  width: 100%;
+}
+
+.todo-list__item-country {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todo-list__item-country-name {
+  font-family: "BloggerSans", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+}
+
+.todo-list__item-text {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 14px;
+
+  font-family: "BloggerSans", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  color: #444444;
+
+  border-radius: 4px;
+
+  &::placeholder {
+    color: inherit;
+  }
+}

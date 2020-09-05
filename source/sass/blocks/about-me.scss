@@ -1,0 +1,130 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #edeff6;
+}
+
+.about-me__photo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-me__level {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 95px;
+
+  border: 2px solid #ff8d30;
+  border-radius: 50%;
+}
+
+.about-me__level-value {
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #1d2e5b;
+  text-align: center;
+}
+
+.about-me__level-title {
+  width: 50px;
+  padding-top: 5px;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #1d2e5b;
+  text-align: center;
+
+  border-top: 2px solid #cbced9;
+}
+
+.about-me__image {
+  display: block;
+  width: 95px;
+  height: 95px;
+
+  border-radius: 50%;
+}
+
+.about-me__photo-change {
+  @include -link-reset;
+  box-sizing: content-box;
+
+  display: block;
+  flex-basis: 100%;
+  width: inherit;
+  height: 30px;
+  margin: 0 auto;
+  padding: 5px;
+
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #161c35;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #dfe3f0;
+  border: 0;
+  border-radius: 20px;
+}
+
+.about-me__transport {
+  .transport__item {
+    background-color: #ffffff;
+  }
+}
+
+.about-me__tags,
+.about-me__transport {
+  border: 1px solid #cbced9;
+  border-radius: 8px;
+}
+
+.about-me__tag-list {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+  padding: 21px 25px;
+
+  font-family: "BloggerSans", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(68, 68, 68, 0.6);
+
+  border: none;
+  background-color: #edeff6;
+}
+
+.about-me__transport-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me__tags-title,
+.about-me__transport-title {
+  margin: 0 auto;
+
+  font-family: "BloggerSans-Bold", "Arial", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+}

@@ -1,0 +1,36 @@
+.map {
+  background-color: #ffd74b;
+  padding-top: 37px;
+}
+
+.map__address {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.map__address-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  background-image: url("../../img/contacts-location.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 14px 22px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.map__address-text {
+  font-family: $font-bold;
+  font-size: 16px;
+  color: #192144;
+}
+
+.map__navigate {
+  margin-bottom: 35px;
+
+  border: 2px solid #192144;
+}

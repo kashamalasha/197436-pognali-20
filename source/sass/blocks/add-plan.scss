@@ -1,0 +1,26 @@
+.add-plan {
+  padding: 20px;
+
+  background-color: #d4d9eb;
+  color: #444444;
+}
+
+.add-plan__title {
+  @include -title-reset;
+  margin-bottom: 25px;
+
+  color: #1d2e5b;
+}
+
+.add-plan__step {
+  width: 270px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  border: none;
+}
+
+.add-plan__step-title {
+  display: block;
+  float: left;
+}

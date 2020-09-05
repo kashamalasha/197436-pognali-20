@@ -3,35 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__logo header-logo">
-      <img class="header-logo__image" src="img/logo-mobile-white@1x.png" width="100" height= "19" alt="Логотип Погнали">
-    </div>
     <nav class="main-nav">
-      <!--TODO: заменить кнопку на бургер-->
-      <button class="main-nav__toggle" type="button">
+      <img class="page-header__logo" src="img/logo-mobile-white@1x.png" width="100" height= "19" alt="Логотип Погнали">
+      <button class="page-header__toggle-menu" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </nav>
-    <p class="page-header__text">В путешествие с крутыми попутчиками!</p>
-    <img class="page-header__image" src="img/traveller-illustration-mobile@1x.png" width="192" height="255" alt="Путешественник с чемоданом">
-    <div class="user-nav">
-      <a class="user-nav__button user-nav__button--phone" href="tel:">
-        <span class="visually-hidden">Позвонить нам</span>
-      </a>
-      <a class="user-nav__button user-nav__button--mail" href="mailto:">
-        <span class="visually-hidden">Написать нам</span>
-      </a>
-      <a class="user-nav__button user-nav__button--auth" href="#">
-        Авторизация
-      </a>
-    </div>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Сервис совместных путешествий "Погнали"</h1>
+    <section class="intro">
+      <p class="intro__text">В путешествие с крутыми попутчиками!</p>
+      <img class="intro__image" src="img/traveller-illustration-mobile@1x.png" width="192" height="255" alt="Путешественник с чемоданом">
+      <div class="user-nav">
+        <a class="user-nav__button user-nav__button--phone" href="tel:">
+          <span class="visually-hidden">Позвонить нам</span>
+        </a>
+        <a class="user-nav__button user-nav__button--mail" href="mailto:">
+          <span class="visually-hidden">Написать нам</span>
+        </a>
+        <a class="user-nav__button user-nav__button--auth" href="#">
+          Авторизация
+        </a>
+      </div>
+    </section>
     <section class="feedback">
       <h2 class="visually-hidden">О нас говорят</h2>
       <blockquote class="feedback-quote">
@@ -243,17 +243,15 @@
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts__header">Заинтересовались?</h2>
+      <h2 class="contacts__header header">Заинтересовались?</h2>
       <p class="contacts__text">
         Зарегистрируйтесь, это быстро и бесплатно!
         Уже зарегистрированы? Тогда скорее
-        <span class="contacts__text contacts__text--decorated">авторизуйтесь!</span>
+        <a class="contacts__text contacts__link-auth" href="#">авторизуйтесь!</a>
       </p>
       <form class="contacts__form send-email" action="https://echo.htmlacademy.ru/">
-        <label class="visually-hidden">E-mail адрес
-          <input class="send-email__address" type="email" placeholder="E-mail">
-        </label>
-        <input class="send-email__submit" type="submit">
+        <input class="send-email__address" type="email" id="email" placeholder="E-mail">
+        <button class="send-email__submit" type="submit" value=""></button>
       </form>
       <p class="contacts__text">
         Остались вопросы?
@@ -261,20 +259,27 @@
       </p>
       <ul class="contacts-list">
         <li class="contacts-list__item">
-          <img class="contacts-list__item-image" src="img/contacts-phone.svg" width="18" height="18" alt="Телефон">
+          <div class="contacts-list__item-icon contacts-list__item-icon--phone"></div>
           <a class="contacts-list__item-link" href="tel:88005558628">8 800 555-86-28</a>
         </li>
         <li class="contacts-list__item">
-          <img class="contacts-list__item-image" src="img/contacts-mail.svg" width="18" height="13" alt="Электронная почта">
+          <div class="contacts-list__item-icon contacts-list__item-icon--mail"></div>
           <a class="contacts-list__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
       </ul>
-      <p class="address">
-        <img class="address__image" src="img/contacts-location.svg" width="14" height="22" alt="Расположение">
-        <span class="address__text">ул. Большая Конюшенная, 19/8</span>
-      </p>
-      <a class="map__navigate-button" href="#">Проложить маршрут</a>
-      <img class="map__preview-image" src="https://via.placeholder.com/320x546" width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
+      <div class="map">
+        <div class="map__address">
+          <div class="map__address-icon"></div>
+          <span class="map__address-text">ул. Большая Конюшенная, 19/8</span>
+        </div>
+        <a class="map__navigate destinations__show-all" href="#">
+        <span class="destinations__show-all-text">Проложить маршрут</span>
+        <svg class="destinations__show-all-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14">
+          <polygon points="0,14 0,0.1 10,7.1" />
+        </svg>
+      </a>
+        <img class="map__preview-image" src="https://via.placeholder.com/320x546" width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
+      </div>
     </section>
   </main>
   <footer class="page-footer">

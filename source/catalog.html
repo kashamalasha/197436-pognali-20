@@ -33,60 +33,64 @@
       <form class="companion-filter__form" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-item">
           <legend class="filter-item__header">Хобби</legend>
+          <div class="filter-item__inner"></div>
         </fieldset>
         <fieldset class="filter-item">
           <legend class="filter-item__header">Музыка</legend>
-          <input class="filter-item__checkbox" type="checkbox" id="music-1" checked>
-          <label class="filter-item__label" for="music-1">Тяжелый рок</label>
-          <input class="filter-item__checkbox" type="checkbox" id="music-2">
-          <label class="filter-item__label" for="music-2">Русский рэп</label>
-          <input class="filter-item__checkbox" type="checkbox" id="music-3">
-          <label class="filter-item__label" for="music-3">Евроденс</label>
+          <div class="filter-item__inner">
+            <input class="filter-item__checkbox" type="checkbox" id="music-1" checked>
+            <label class="filter-item__label" for="music-1">Тяжелый рок</label>
+            <input class="filter-item__checkbox" type="checkbox" id="music-2">
+            <label class="filter-item__label" for="music-2">Русский рэп</label>
+            <input class="filter-item__checkbox" type="checkbox" id="music-3">
+            <label class="filter-item__label" for="music-3">Евроденс</label>
+          </div>
         </fieldset>
         <fieldset class="filter-item">
           <legend class="filter-item__header">Еда</legend>
+          <div class="filter-item__inner"></div>
         </fieldset>
         <fieldset class="filter-item">
           <legend class="filter-item__header">Транспорт</legend>
-          <input class="visually-hidden" type="checkbox" id="transport-1" checked>
-          <label class="filter-item__label" for="transport-1">
-            <img class="filter-item__label-image" src="img/plane.svg" width="14" height="16" alt="Самолет">
-            <span class="visually-hidden">Самолет</span>
-          </label>
-          <input class="visually-hidden" type="checkbox" id="transport-2" checked>
-          <label class="filter-item__image" for="transport-2">
-            <img class="filter-item__label-image" src="img/bus.svg" width="13" height="16" alt="Автобус">
-            <span class="visually-hidden">Автобус</span>
-          </label>
-          <input class="visually-hidden" type="checkbox" id="transport-3">
-          <label class="filter-item__image" for="transport-3">
-            <img class="filter-item__label-image" src="img/bike.svg" width="19" height="17" alt="Велосипед">
-            <span class="visually-hidden">Велосипед</span>
-          </label>
-          <input class="visually-hidden" type="checkbox" id="transport-4" checked>
-          <label class="filter-item__image" for="transport-4">
-            <img class="filter-item__label-image" src="img/run.svg" width="15" height="17" alt="Пешие прогулки">
-            <span class="visually-hidden">Пешие прогулки</span>
-          </label>
+          <div class="filter-item__inner filter-item__transport">
+            <input class="visually-hidden" type="checkbox" id="transport-plane" checked>
+            <label class="filter-item__label transport__item transport__item--plane" for="transport-plane">
+              <span class="visually-hidden">Самолет</span>
+            </label>
+            <input class="visually-hidden" type="checkbox" id="transport-bus" checked>
+            <label class="filter-item__label transport__item transport__item--bus" for="transport-bus">
+              <span class="visually-hidden">Автобус</span>
+            </label>
+            <input class="visually-hidden" type="checkbox" id="transport-bike">
+            <label class="filter-item__label transport__item transport__item--bike" for="transport-bike">
+              <span class="visually-hidden">Велосипед</span>
+            </label>
+            <input class="visually-hidden" type="checkbox" id="transport-hike" checked>
+            <label class="filter-item__label transport__item transport__item--hike" for="transport-hike">
+              <span class="visually-hidden">Пешие прогулки</span>
+            </label>
+          </div>
         </fieldset>
         <fieldset class="filter-item">
           <legend class="filter-item__header">Левел</legend>
-          <div class="level-controls">
-            <input class="level-controls__input" id="min-level" type="text" name="min-level" value="30">
-            <label class="visually-hidden" for="min-level">от</label>
-            <span>—</span>
-            <input class="level-controls__input" id="max-level" type="text" name="min-level" value="100">
-            <label class="visually-hidden" for="max-level">до</label>
-          </div>
-          <div class="range-controls">
-            <div class="range-controls__scale">
-              <div class="range-controls__scale-bar"></div>
+          <div class="filter-item__inner">
+            <div class="filter-item__controls">
+              <input class="filter-item__controls-input" id="min-level" type="text" name="min-level" value="30">
+              <label class="visually-hidden" for="min-level">от</label>
+              <span>—</span>
+              <input class="filter-item__controls-input" id="max-level" type="text" name="min-level" value="100">
+              <label class="visually-hidden" for="max-level">до</label>
             </div>
-            <div class="range-controls__toggle range-controls__toggle--max"></div>
-            <div class="range-controls__toggle range-controls__toggle--min"></div>
+            <div class="filter-item__controls">
+              <div class="filter-item__controls-scale">
+                <div class="filter-item__controls-scale-bar"></div>
+              </div>
+              <div class="filter-item__controls-toggle filter-item__controls-toggle--max"></div>
+              <div class="filter-item__controls-toggle filter-item__controls-toggle--min"></div>
+            </div>
           </div>
         </fieldset>
-        <button class="companion-filter__show show-button" type="submit">Показать</button>
+        <button class="companion-filter__show" type="submit">Показать</button>
       </form>
     </section>
     <section class="catalog">
